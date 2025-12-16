@@ -30,11 +30,4 @@ END;
 $$;
 
 -- 3. Gọi Procedure để kiểm tra hoạt động với một order_id cụ thể
-DO $$
-DECLARE
-    my_total NUMERIC;
-BEGIN
-    CALL calculate_order_total(1, my_total);
-    RAISE NOTICE 'Tổng giá trị của đơn hàng 1 là: %', my_total;
-END;
-$$;
+CALL calculate_order_total(1, my_total);
